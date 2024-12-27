@@ -45,7 +45,8 @@ def display_menu(stdscr):
     stdscr.addstr(5, 2, "[2] Upgrade packages", curses.color_pair(1))
     stdscr.addstr(6, 2, "[3] Full distribution upgrade", curses.color_pair(1))
     stdscr.addstr(7, 2, "[4] Clean obsolete files", curses.color_pair(1))
-    stdscr.addstr(8, 2, "[q] Quit", curses.color_pair(1))
+    stdscr.addstr(8, 2, "[5] Auto-remove unnecessary packages", curses.color_pair(1))
+    stdscr.addstr(9, 2, "[q] Quit", curses.color_pair(1))
     stdscr.refresh()
 
 # Main GUI loop
@@ -59,21 +60,24 @@ def main_gui(stdscr):
     display_menu(stdscr)
 
     while True:
-        stdscr.addstr(10, 2, "Select an option: ", curses.color_pair(3))
+        stdscr.addstr(11, 2, "Select an option: ", curses.color_pair(3))
         key = stdscr.getch()
 
         if key == ord('1'):
             run_command_stream(stdscr, "sudo apt-get update", "Updating package lists")
-            display_menu(stdscr)  # Return to the menu
+            display_menu(stdscr)
         elif key == ord('2'):
             run_command_stream(stdscr, "sudo apt-get upgrade -y", "Upgrading packages")
-            display_menu(stdscr)  # Return to the menu
+            display_menu(stdscr)
         elif key == ord('3'):
             run_command_stream(stdscr, "sudo apt-get dist-upgrade -y", "Performing distribution upgrade")
-            display_menu(stdscr)  # Return to the menu
+            display_menu(stdscr)
         elif key == ord('4'):
             run_command_stream(stdscr, "sudo apt-get autoclean", "Cleaning obsolete files")
-            display_menu(stdscr)  # Return to the menu
+            display_menu(stdscr)
+        elif key == ord('5'):
+            run_command_stream(stdscr, "sudo apt-get autoremove -y", "Removing unnecessary packages")
+            display_menu(stdscr)
         elif key == ord('q'):
             break
 

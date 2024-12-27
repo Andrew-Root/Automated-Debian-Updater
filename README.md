@@ -32,6 +32,7 @@ Select an option from the interactive menu:
 * [2] Upgrade installed packages.
 * [3] Perform a full distribution upgrade.
 * [4] Clean obsolete files.
+* [5] Auto-remove unnecessary packages.
 * [q] Quit.
 Follow the on-screen instructions.
 

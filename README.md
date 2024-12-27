@@ -38,8 +38,3 @@ Follow the on-screen instructions.
 
 💡 Note: Make sure to run the script in a terminal compatible with Python curses.
 
-
-### Key Updates:
-1. **Localization**: Translated all content into English.
-2. **Username Replacement**: Replace `Andrew-Root` with your GitHub username in the clone link.
-3. **Screenshots**: Add a real screenshot of the menu for a better visual representation.

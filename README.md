@@ -1,6 +1,6 @@
 # Automate Debian Updater
 
-**Automate Debian Updater** is a terminal-based tool for easily updating Debian systems with a colorful **Airgeddon-inspired** interface. It provides an interactive menu to perform common system maintenance tasks such as updating packages, upgrading the system, and cleaning obsolete files.
+**Automate Debian Updater** is a terminal-based tool for easily updating Debian systems with a colorful interface. It provides an interactive menu to perform common system maintenance tasks such as updating packages, upgrading the system, and cleaning obsolete files.
 
 ## 🎨 Features
 
